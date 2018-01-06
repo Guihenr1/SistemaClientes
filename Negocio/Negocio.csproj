@@ -40,7 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClienteNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AcessoDados\AcessoDados.csproj">
+      <Project>{2081ee52-adec-47a4-b446-4262e6a1700b}</Project>
+      <Name>AcessoDados</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObjetoTransferencia\ObjetoTransferencia.csproj">
+      <Project>{e8a7967c-fb2a-44ec-95a8-04fc1c667988}</Project>
+      <Name>ObjetoTransferencia</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
