@@ -72,19 +72,35 @@ namespace Apresentacao
 
         private void btInserir_Click(object sender, EventArgs e)
         {
-            FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Inserir);
+            FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Inserir, null);
             frmClienteCadastrar.ShowDialog();
         }
 
         private void btAlterar_Click(object sender, EventArgs e)
         {
-            FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Alterar);
+            if (dgwPrincipal.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Nenhum cliente selecionado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            
+            Cliente clienteSelecionado = (dgwPrincipal.SelectedRows[0].DataBoundItem as Cliente);
+
+            FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Alterar, clienteSelecionado);
             frmClienteCadastrar.ShowDialog();
         }
 
         private void btConsultar_Click(object sender, EventArgs e)
         {
-            FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Consultar);
+            if (dgwPrincipal.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Nenhum cliente selecionado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            Cliente clienteSelecionado = (dgwPrincipal.SelectedRows[0].DataBoundItem as Cliente);
+
+            FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Consultar, clienteSelecionado);
             frmClienteCadastrar.ShowDialog();
         }
     }
