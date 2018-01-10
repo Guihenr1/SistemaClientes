@@ -17,9 +17,16 @@ namespace Apresentacao
         public FrmClienteSelecionar()
         {
             InitializeComponent();
+            dgwPrincipal.AutoGenerateColumns = false;
+            AtualizarGrid();
         }
 
         private void btPesquisar_Click(object sender, EventArgs e)
+        {
+            AtualizarGrid();
+        }
+
+        public void AtualizarGrid()
         {
             ClienteNegocio clienteNegocio = new ClienteNegocio();
             ClienteColecao clienteColecao = new ClienteColecao();
@@ -30,6 +37,55 @@ namespace Apresentacao
             dgwPrincipal.DataSource = clienteColecao;
             dgwPrincipal.Update();
             dgwPrincipal.Refresh();
+        }
+
+        private void btExcluir_Click(object sender, EventArgs e)
+        {
+            if(dgwPrincipal.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Nenhum cliente selecionado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            DialogResult dialogResult = MessageBox.Show("Deseja excluir esse cliente?", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            
+            if(dialogResult == DialogResult.No)
+            {
+                return;
+            }
+
+            Cliente clienteSelecionado = (dgwPrincipal.SelectedRows[0].DataBoundItem as Cliente);
+            ClienteNegocio clienteNegocio = new ClienteNegocio();
+            string retorno = clienteNegocio.Excluir(clienteSelecionado);
+
+            try
+            {
+                int idCliente = Convert.ToInt32(retorno);
+                MessageBox.Show("Cliente excluido", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AtualizarGrid();
+            }
+            catch
+            {
+                MessageBox.Show("Não foi possivel excluir. Detalhes: " + retorno, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btInserir_Click(object sender, EventArgs e)
+        {
+            FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Inserir);
+            frmClienteCadastrar.ShowDialog();
+        }
+
+        private void btAlterar_Click(object sender, EventArgs e)
+        {
+            FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Alterar);
+            frmClienteCadastrar.ShowDialog();
+        }
+
+        private void btConsultar_Click(object sender, EventArgs e)
+        {
+            FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Consultar);
+            frmClienteCadastrar.ShowDialog();
         }
     }
 }

@@ -28,10 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbNomeCodigo = new System.Windows.Forms.Label();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.btPesquisar = new System.Windows.Forms.Button();
             this.dgwPrincipal = new System.Windows.Forms.DataGridView();
+            this.colIDCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDataNascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSexo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.colLimiteCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btInserir = new System.Windows.Forms.Button();
             this.btAlterar = new System.Windows.Forms.Button();
             this.btExcluir = new System.Windows.Forms.Button();
@@ -68,11 +78,74 @@
             // 
             // dgwPrincipal
             // 
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgwPrincipal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgwPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwPrincipal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colIDCliente,
+            this.colNome,
+            this.colDataNascimento,
+            this.colSexo,
+            this.colLimiteCompra});
             this.dgwPrincipal.Location = new System.Drawing.Point(12, 44);
+            this.dgwPrincipal.MultiSelect = false;
             this.dgwPrincipal.Name = "dgwPrincipal";
+            this.dgwPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwPrincipal.Size = new System.Drawing.Size(760, 287);
             this.dgwPrincipal.TabIndex = 3;
+            // 
+            // colIDCliente
+            // 
+            this.colIDCliente.DataPropertyName = "IDCliente";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle7.Format = "#,##0";
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Red;
+            this.colIDCliente.DefaultCellStyle = dataGridViewCellStyle7;
+            this.colIDCliente.HeaderText = "Codigo";
+            this.colIDCliente.Name = "colIDCliente";
+            this.colIDCliente.ReadOnly = true;
+            this.colIDCliente.Width = 60;
+            // 
+            // colNome
+            // 
+            this.colNome.DataPropertyName = "Nome";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colNome.DefaultCellStyle = dataGridViewCellStyle8;
+            this.colNome.HeaderText = "Nome";
+            this.colNome.Name = "colNome";
+            this.colNome.ReadOnly = true;
+            this.colNome.Width = 120;
+            // 
+            // colDataNascimento
+            // 
+            this.colDataNascimento.DataPropertyName = "DataNascimento";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.Format = "dd/MM/yyyy";
+            this.colDataNascimento.DefaultCellStyle = dataGridViewCellStyle9;
+            this.colDataNascimento.HeaderText = "Data Nascimento";
+            this.colDataNascimento.Name = "colDataNascimento";
+            this.colDataNascimento.ReadOnly = true;
+            this.colDataNascimento.Width = 120;
+            // 
+            // colSexo
+            // 
+            this.colSexo.DataPropertyName = "Sexo";
+            this.colSexo.HeaderText = "Sexo";
+            this.colSexo.Name = "colSexo";
+            this.colSexo.ReadOnly = true;
+            this.colSexo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colSexo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // colLimiteCompra
+            // 
+            this.colLimiteCompra.DataPropertyName = "LimiteDeCompra";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "#,##0.00";
+            this.colLimiteCompra.DefaultCellStyle = dataGridViewCellStyle10;
+            this.colLimiteCompra.HeaderText = "Limite Compra";
+            this.colLimiteCompra.Name = "colLimiteCompra";
+            this.colLimiteCompra.ReadOnly = true;
             // 
             // btInserir
             // 
@@ -82,6 +155,7 @@
             this.btInserir.TabIndex = 9;
             this.btInserir.Text = "Inserir";
             this.btInserir.UseVisualStyleBackColor = true;
+            this.btInserir.Click += new System.EventHandler(this.btInserir_Click);
             // 
             // btAlterar
             // 
@@ -91,6 +165,7 @@
             this.btAlterar.TabIndex = 10;
             this.btAlterar.Text = "Alterar";
             this.btAlterar.UseVisualStyleBackColor = true;
+            this.btAlterar.Click += new System.EventHandler(this.btAlterar_Click);
             // 
             // btExcluir
             // 
@@ -100,6 +175,7 @@
             this.btExcluir.TabIndex = 11;
             this.btExcluir.Text = "Excluir";
             this.btExcluir.UseVisualStyleBackColor = true;
+            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
             // btConsultar
             // 
@@ -109,6 +185,7 @@
             this.btConsultar.TabIndex = 12;
             this.btConsultar.Text = "Consultar";
             this.btConsultar.UseVisualStyleBackColor = true;
+            this.btConsultar.Click += new System.EventHandler(this.btConsultar_Click);
             // 
             // btFechar
             // 
@@ -156,5 +233,10 @@
         private System.Windows.Forms.Button btExcluir;
         private System.Windows.Forms.Button btConsultar;
         private System.Windows.Forms.Button btFechar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIDCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDataNascimento;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colSexo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLimiteCompra;
     }
 }

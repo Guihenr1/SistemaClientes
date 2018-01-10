@@ -16,3 +16,4 @@ C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\Apresentacao\bin\Debug\Acesso
 C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\Apresentacao\bin\Debug\AcessoDados.dll.config
 C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\Apresentacao\obj\Debug\Apresentacao.FrmClienteSelecionar.resources
 C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\Apresentacao\obj\Debug\Apresentacao.FrmMenu.resources
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\Apresentacao\obj\Debug\Apresentacao.FrmClienteCadastrar.resources
