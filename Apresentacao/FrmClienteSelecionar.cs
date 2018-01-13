@@ -73,7 +73,11 @@ namespace Apresentacao
         private void btInserir_Click(object sender, EventArgs e)
         {
             FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Inserir, null);
-            frmClienteCadastrar.ShowDialog();
+            DialogResult dialogResult = frmClienteCadastrar.ShowDialog();
+            if(dialogResult == DialogResult.Yes)
+            {
+                AtualizarGrid();
+            }
         }
 
         private void btAlterar_Click(object sender, EventArgs e)
@@ -87,7 +91,11 @@ namespace Apresentacao
             Cliente clienteSelecionado = (dgwPrincipal.SelectedRows[0].DataBoundItem as Cliente);
 
             FrmClienteCadastrar frmClienteCadastrar = new FrmClienteCadastrar(AcaoNaTela.Alterar, clienteSelecionado);
-            frmClienteCadastrar.ShowDialog();
+            DialogResult result = frmClienteCadastrar.ShowDialog();
+            if (result == DialogResult.Yes)
+            {
+                AtualizarGrid();
+            }
         }
 
         private void btConsultar_Click(object sender, EventArgs e)

@@ -38,6 +38,7 @@ namespace Negocio
             try
             {
                 acessoDadosSqlServer.LimparParametros();
+                acessoDadosSqlServer.AdicionarParametros("@IDCliente", cliente.IDCliente);
                 acessoDadosSqlServer.AdicionarParametros("@Nome", cliente.Nome);
                 acessoDadosSqlServer.AdicionarParametros("@DataNascimento", cliente.DataNascimento);
                 acessoDadosSqlServer.AdicionarParametros("@Sexo", cliente.Sexo);
