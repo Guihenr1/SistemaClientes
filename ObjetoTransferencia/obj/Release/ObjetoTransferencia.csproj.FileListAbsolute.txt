@@ -1,0 +1,6 @@
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\ObjetoTransferencia\bin\Release\ObjetoTransferencia.dll
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\ObjetoTransferencia\bin\Release\ObjetoTransferencia.pdb
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\ObjetoTransferencia\obj\Release\ObjetoTransferencia.csprojResolveAssemblyReference.cache
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\ObjetoTransferencia\obj\Release\ObjetoTransferencia.csproj.CoreCompileInputs.cache
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\ObjetoTransferencia\obj\Release\ObjetoTransferencia.dll
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\ObjetoTransferencia\obj\Release\ObjetoTransferencia.pdb

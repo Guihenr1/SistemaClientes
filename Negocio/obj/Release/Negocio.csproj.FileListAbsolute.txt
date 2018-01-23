@@ -1,0 +1,11 @@
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\Negocio\bin\Release\Negocio.dll
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\Negocio\bin\Release\Negocio.pdb
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\Negocio\bin\Release\AcessoDados.dll
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\Negocio\bin\Release\ObjetoTransferencia.dll
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\Negocio\bin\Release\AcessoDados.pdb
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\Negocio\bin\Release\AcessoDados.dll.config
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\Negocio\bin\Release\ObjetoTransferencia.pdb
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\Negocio\obj\Release\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\Negocio\obj\Release\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\Negocio\obj\Release\Negocio.dll
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\Negocio\obj\Release\Negocio.pdb

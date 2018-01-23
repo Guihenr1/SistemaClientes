@@ -1,0 +1,7 @@
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\AcessoDados\bin\Release\AcessoDados.dll.config
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\AcessoDados\bin\Release\AcessoDados.dll
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\AcessoDados\bin\Release\AcessoDados.pdb
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\AcessoDados\obj\Release\AcessoDados.csprojResolveAssemblyReference.cache
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\AcessoDados\obj\Release\AcessoDados.csproj.CoreCompileInputs.cache
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\AcessoDados\obj\Release\AcessoDados.dll
+C:\Users\guilh\Desktop\VB\C# e WEB\SistemaClientes\AcessoDados\obj\Release\AcessoDados.pdb
